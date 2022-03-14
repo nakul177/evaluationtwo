@@ -7,7 +7,7 @@ export const Rentals = () => {
 const [ data , setData] = useState([])
 
 useEffect(() =>{
-  axios.get("http://localhost:3001/houses").then((res)=>{
+  axios.get("http://localhost:8080/houses").then((res)=>{
     setData(res.data)
   })
 
@@ -73,8 +73,7 @@ useEffect(() =>{
                 <td className="areaCode">{house.areaCode}</td>
                 <td className="rent">{house.rent}</td>
                 <td className="preferredTenants">
-                   married:{house.married}
-                   bachelor:{house.bachelor}
+                   {house.married}{house.bachelor}
                 </td>
                 <td className="houseImage">
                   <img src={house.image} alt="house" />
