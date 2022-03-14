@@ -1,0 +1,24 @@
+{
+  "houses": [
+    {
+      "name": "add",
+      "ownerName": "nakul",
+      "address": "kel",
+      "areaCode": "1222",
+      "rent": "122",
+      "bachelor": true,
+      "married": true,
+      "id": 1
+    },
+    {
+      "name": "rahul",
+      "ownerName": "nkall",
+      "address": "kwl",
+      "areaCode": "1223",
+      "rent": "1312",
+      "bachelor": true,
+      "married": true,
+      "id": 2
+    }
+  ]
+}
