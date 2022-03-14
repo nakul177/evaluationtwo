@@ -73,7 +73,7 @@ useEffect(() =>{
                 <td className="areaCode">{house.areaCode}</td>
                 <td className="rent">{house.rent}</td>
                 <td className="preferredTenants">
-                   {house.married}{house.bachelor}
+                   {house.married === true ? "married" : "bachelor"}
                 </td>
                 <td className="houseImage">
                   <img src={house.image} alt="house" />
