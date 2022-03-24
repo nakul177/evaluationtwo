@@ -14,43 +14,43 @@ useEffect(() =>{
 },[])
 
 const sortbyID = async () =>{
-  let D1 = data.sort((a , b) =>{
+  let D = data.sort((a , b) =>{
     return  a.id - b.id 
   })
-  setData([...D1])
+  setData([...D])
 }
 
 const rentLow = async () =>{
-  let D1 = data.sort((a , b) =>{
+  let D = data.sort((a , b) =>{
     return  a.rent - b.rent 
   })
-  setData([...D1])
+  setData([...D])
 }
 const renthigh = async () =>{
-  let D1 = data.sort((a , b) =>{
+  let D = data.sort((a , b) =>{
     return  b.rent - a.rent 
   })
-  setData([...D1])
+  setData([...D])
 }
 
 const areaLow = async () =>{
-  let D1 = data.sort((a , b) =>{
+  let D = data.sort((a , b) =>{
     return  a.areaCode - b.areaCode 
   })
-  setData([...D1])
+  setData([...D])
 }
 const areahigh = async () =>{
-  let D1 = data.sort((a , b) =>{
+  let D = data.sort((a , b) =>{
     return  b.areaCode - a.areaCode 
   })
-  setData([...D1])
+  setData([...D])
 }
 
 const filterData = (val) =>{
-  let D1 = data.filter((el) =>{
+  let D = data.filter((el) =>{
     return el.address === val
   })
-  setData([...D1])
+  setData([...D])
 }
 
 
