@@ -19,6 +19,16 @@
       "bachelor": true,
       "married": true,
       "id": 2
+    },
+    {
+      "name": "hdhdjk",
+      "ownerName": "dihjksh",
+      "address": "qhwdqihsajk",
+      "areaCode": "wdhisa",
+      "rent": "dshduihwd",
+      "bachelor": true,
+      "married": false,
+      "id": 3
     }
   ]
 }

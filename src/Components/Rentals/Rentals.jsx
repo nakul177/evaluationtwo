@@ -13,41 +13,63 @@ useEffect(() =>{
 
 },[])
 
+const sortbyID = async () =>{
+  let D1 = data.sort((a , b) =>{
+    return  a.id - b.id 
+  })
+  setData([...D1])
+}
+
+const rentLow = async () =>{
+  let D1 = data.sort((a , b) =>{
+    return  a.rent - b.rent 
+  })
+  setData([...D1])
+}
+const renthigh = async () =>{
+  let D1 = data.sort((a , b) =>{
+    return  b.rent - a.rent 
+  })
+  setData([...D1])
+}
+
+const areaLow = async () =>{
+  let D1 = data.sort((a , b) =>{
+    return  a.areaCode - b.areaCode 
+  })
+  setData([...D1])
+}
+const areahigh = async () =>{
+  let D1 = data.sort((a , b) =>{
+    return  b.areaCode - a.areaCode 
+  })
+  setData([...D1])
+}
+
+const filterData = (val) =>{
+  let D1 = data.filter((el) =>{
+    return el.address === val
+  })
+  setData([...D1])
+}
 
 
   return (
     <div className="rentalContainer">
-      <div className="sortingButtons">
-        <button className="sortById" onClick={data.map((e) =>(
-        e.id
-        )).sort((a,b) =>{
-          return a-b
-        })}>Sort by ID</button>
-        <button className="sortByRentAsc" onClick={data.map((e) =>(
-       e.Rentals
-        )).sort((a,b) =>{
-          return a-b
-        })}>Rent Low to high</button>
-        <button className="sortByRentDesc" onClick={data.map((e) =>(
-       e.rent
-        )).sort((a,b) =>{
-          return b-a
-        })}>Rent High to low</button>
-        <button className="sortByAreaAsc" onClick={data.map((e) =>(
-       e.Rentals
-        )).sort((a,b) =>{
-          return a-b
-        })}>Area Low to high</button>
-        <button className="sortByAreaDesc" onClick={data.map((e) =>(
-       e.Rentals
-        )).sort((a,b) =>{
-          return b - a
-        })}>Area High to Low</button>
+         <div className="sortingButtons"> 
+        <button className="sortById" onClick={sortbyID}>Sort by ID</button>
+        <button className="sortByRentAsc" onClick={rentLow}>Rent Low to high</button>
+        <button className="sortByRentDesc" onClick={renthigh}>Rent High to low</button>
+        <button className="sortByAreaAsc" onClick={ areaLow }>Area Low to high</button>
+        <button className="sortByAreaDesc" onClick={areahigh}>Area High to Low</button>
       </div>
+  
+      
       <input
         className="searchAddress"
         type="text"
         placeholder="Search Address"
+        onChange={filterData}
       />
       <table className="table" border="1">
         <thead>
